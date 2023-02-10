@@ -1,1 +1,8 @@
-<p>card</p>
+<div (click)="showContentIdAndTitle()" [style.border]="border">
+    <header>{{ content.title }}</header>
+    <img [src]="content.image" alt="Content Image">
+    <p>{{ content.description }}</p>
+    <p>Type: {{ content.type }}</p>
+    <p>Tags: {{ content.tags.join(', ') }}</p>
+  </div>
+  

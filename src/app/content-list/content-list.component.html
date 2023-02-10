@@ -1,0 +1,28 @@
+<section>
+    <h1>My Favorite Actor</h1>
+
+    <div>
+        <input type="text" id="search">
+        <button (click)="content()">serach</button>
+    </div>
+
+    <ul>
+        <li *ngFor="let content of contents | FilterByType">
+          {{content.title}}
+        </li>
+      </ul>
+    
+      <h2>Contents of type "News":</h2>
+      <ul>
+        <li *ngFor="let content of contents | FilterByType:'News'">
+          {{content.title}}
+        </li>
+      </ul>
+    
+      <h2>Contents of type "Blog":</h2>
+      <ul>
+        <li *ngFor="let content of contents | FilterByType:'Blog'">
+          {{content.title}}
+        </li>
+      </ul>
+</section>
